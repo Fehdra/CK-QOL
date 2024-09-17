@@ -36,7 +36,7 @@ namespace CK_QOL.Features.QuickSummon
 
         private void ApplyKeyBinds()
         {
-            RewiredExtensionModule.AddKeybind(KeyBindName, KeyBindAction, KeyboardKeyCode.V);
+            RewiredExtensionModule.AddKeybind(KeyBindName, KeyBindAction, KeyboardKeyCode.X);
         }
 
         #endregion Configurations
