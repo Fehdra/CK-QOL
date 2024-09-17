@@ -1,0 +1,20 @@
+Library: CK-QOL_burst_generated_Windows
+--platform=Windows
+--backend=burst-llvm-16
+--target=X64_SSE2
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--target-framework=NetFramework
+--format=Coff
+--disable-warnings=BC1370
+--temp-folder=C:\Users\Mirko\AppData\Local\Temp\
+--decode-folder=D:\CK-ModSDK
+--output=C:\Steam\steamapps\common\Core Keeper\CoreKeeper_Data\StreamingAssets\Mods\CK-QOL\CK-QOL_burst_generated_Windows
+--root-assembly=D:/CK-ModSDK/Assets\..\Temp\ModBurst\Assemblies\CK-QOL.dll
+--root-assembly=D:/CK-ModSDK/Assets\..\Temp\ModBurst\Assemblies\CK-QOL.dll
+--assembly-folder=D:/CK-ModSDK/Assets\..\Temp\ModBurst\Assemblies
+--assembly-folder=D:/CK-ModSDK/Assets\..\Temp\ModBurst\Assemblies
+--method=Unity.Entities.JobChunkExtensions+JobChunkProducer`1[[CK_QOL.Features.NoDeathPenalty.Systems.NoDeathPenaltySystem+NoDeathPenaltySystem_56DDECA6_LambdaJob_0_Job, CK-QOL, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.Entities.JobChunkExtensions+JobChunkWrapper`1[[CK_QOL.Features.NoDeathPenalty.Systems.NoDeathPenaltySystem+NoDeathPenaltySystem_56DDECA6_LambdaJob_0_Job, CK-QOL, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--b3161362093b0376d6a024ba43b13606
+
