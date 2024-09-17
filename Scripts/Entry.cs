@@ -8,6 +8,7 @@ using CK_QOL.Features.NoDeathPenalty;
 using CK_QOL.Features.NoEquipmentDurabilityLoss;
 using CK_QOL.Features.QuickEat;
 using CK_QOL.Features.QuickHeal;
+using CK_QOL.Features.QuickSummon; // <-- Add QuickSummon import
 using CK_QOL.Features.QuickStash;
 using CoreLib;
 using CoreLib.Localization;
@@ -56,53 +57,57 @@ namespace CK_QOL
 				NoDeathPenalty.Instance,
 				NoEquipmentDurabilityLoss.Instance,
 				QuickHeal.Instance,
-				QuickEat.Instance
+				QuickEat.Instance,
+				QuickSummon.Instance // <-- Add QuickSummon feature here
 			});
 
 			foreach (var feature in _features.OrderBy(feature => feature.IsEnabled))
 			{
 				ModLogger.Info($"{feature.DisplayName} ({feature.FeatureType})");
                 
-                if(feature.IsEnabled)
-                {
-                    switch (feature)
-                    {
-                        case CraftingRange { IsEnabled: true } craftingRange:
-                            ModLogger.Info($"{nameof(craftingRange.MaxRange)}: {craftingRange.MaxRange} ");
-                            ModLogger.Info($"{nameof(craftingRange.MaxChests)}: {craftingRange.MaxChests}");
-                            break;
-                        case QuickStash { IsEnabled: true } quickStash:
-                            ModLogger.Info($"{nameof(quickStash.MaxRange)}: {quickStash.MaxRange} ");
-                            ModLogger.Info($"{nameof(quickStash.MaxChests)}: {quickStash.MaxChests}");
-                            break;
-                        case ItemPickUpNotifier { IsEnabled: true } itemPickUpNotifier:
-                            ModLogger.Info($"{nameof(itemPickUpNotifier.AggregateDelay)}: {itemPickUpNotifier.AggregateDelay}");
-                            break;
-                        case NoDeathPenalty { IsEnabled: true } noDeathPenalty:
-                            ModLogger.Info($"{feature.DisplayName}");
-                            break;
-                        case NoEquipmentDurabilityLoss { IsEnabled: true } noEquipmentDurabilityLoss:
-                            ModLogger.Info($"{feature.DisplayName}");
-                            break;
-                        case QuickHeal { IsEnabled: true } quickHeal:
-                            ModLogger.Info($"{nameof(quickHeal.EquipmentSlotIndex)}: {quickHeal.EquipmentSlotIndex}");
-                            break;
-                        case QuickEat { IsEnabled: true } quickEat:
-                            ModLogger.Info($"{nameof(quickEat.EquipmentSlotIndex)}: {quickEat.EquipmentSlotIndex}");
-                            break;
-                    }
-                }
-                else
-                {
-	                ModLogger.Warn("Feature is disabled.");
-                }
+				if (feature.IsEnabled)
+				{
+					switch (feature)
+					{
+						case CraftingRange { IsEnabled: true } craftingRange:
+							ModLogger.Info($"{nameof(craftingRange.MaxRange)}: {craftingRange.MaxRange} ");
+							ModLogger.Info($"{nameof(craftingRange.MaxChests)}: {craftingRange.MaxChests}");
+							break;
+						case QuickStash { IsEnabled: true } quickStash:
+							ModLogger.Info($"{nameof(quickStash.MaxRange)}: {quickStash.MaxRange} ");
+							ModLogger.Info($"{nameof(quickStash.MaxChests)}: {quickStash.MaxChests}");
+							break;
+						case ItemPickUpNotifier { IsEnabled: true } itemPickUpNotifier:
+							ModLogger.Info($"{nameof(itemPickUpNotifier.AggregateDelay)}: {itemPickUpNotifier.AggregateDelay}");
+							break;
+						case NoDeathPenalty { IsEnabled: true } noDeathPenalty:
+							ModLogger.Info($"{feature.DisplayName}");
+							break;
+						case NoEquipmentDurabilityLoss { IsEnabled: true } noEquipmentDurabilityLoss:
+							ModLogger.Info($"{feature.DisplayName}");
+							break;
+						case QuickHeal { IsEnabled: true } quickHeal:
+							ModLogger.Info($"{nameof(quickHeal.EquipmentSlotIndex)}: {quickHeal.EquipmentSlotIndex}");
+							break;
+						case QuickEat { IsEnabled: true } quickEat:
+							ModLogger.Info($"{nameof(quickEat.EquipmentSlotIndex)}: {quickEat.EquipmentSlotIndex}");
+							break;
+						case QuickSummon { IsEnabled: true } quickSummon: // <-- Add this case for QuickSummon
+							ModLogger.Info($"{nameof(quickSummon.EquipmentSlotIndex)}: {quickSummon.EquipmentSlotIndex}");
+							break;
+					}
+				}
+				else
+				{
+					ModLogger.Warn("Feature is disabled.");
+				}
 			}
 			
 			ModLogger.Info(".. all features loaded.");
 		}
 
 		public void Init()
-		{			
+		{
 			ModLogger.Info("Loaded successfully.");
 		}
 
