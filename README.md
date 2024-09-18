@@ -1,3 +1,5 @@
+il try a and add this to the CK-ModSDK  when i get time later
+
 I wanted a quick summon feature that allows fast summoning and then automatically swaps back to the weapon.  thanks to CK-QOL i can do this :}
 
 
