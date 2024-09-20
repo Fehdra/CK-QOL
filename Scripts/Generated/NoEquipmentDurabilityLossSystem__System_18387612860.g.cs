@@ -64,15 +64,17 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
 
 				var durabilityComponent = global::Unity.Entities.Internal.InternalCompilerInterface.GetComponentAfterCompletingDependency<global::DurabilityCD>(ref __TypeHandle.__DurabilityCD_RO_ComponentLookup, ref this.CheckedStateRef, equippedObject.ValueRO.equipmentPrefab);
 				#line 84 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-				equippedObject.ValueRW.containedObject.objectData.amount = durabilityComponent.maxDurability;
+				equippedObject.ValueRW.containedObject.objectData.amount = durabilityComponent.IsReinforced(equippedObject.ValueRW.containedObject.objectData.amount)
+					? durabilityComponent.maxDurability * 2
+					: durabilityComponent.maxDurability;
 			}
-			#line 87 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			#line 89 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
 
 			base.OnUpdate();
 #line hidden
 		}
 
-        #line 76 "D:/CK-ModSDK/Temp/GeneratedCode/CK-QOL//NoEquipmentDurabilityLossSystem__System_18387612860.g.cs"
+        #line 78 "D:/CK-ModSDK/Temp/GeneratedCode/CK-QOL//NoEquipmentDurabilityLossSystem__System_18387612860.g.cs"
         readonly struct IFE_1312021069_0
         {
             public struct ResolvedChunk
@@ -170,7 +172,7 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
                 state.EntityManager.CompleteDependencyBeforeRW<global::PlayerEquipment.ReduceDurabilityOfAllEquipmentTriggerCD>();
             }
         }
-        #line 174 "D:/CK-ModSDK/Temp/GeneratedCode/CK-QOL//NoEquipmentDurabilityLossSystem__System_18387612860.g.cs"
+        #line 176 "D:/CK-ModSDK/Temp/GeneratedCode/CK-QOL//NoEquipmentDurabilityLossSystem__System_18387612860.g.cs"
         readonly struct IFE_1312021069_1
         {
             public struct ResolvedChunk
@@ -268,7 +270,7 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
                 state.EntityManager.CompleteDependencyBeforeRW<global::PlayerEquipment.ReduceDurabilityOfEquippedTriggerCD>();
             }
         }
-        #line 272 "D:/CK-ModSDK/Temp/GeneratedCode/CK-QOL//NoEquipmentDurabilityLossSystem__System_18387612860.g.cs"
+        #line 274 "D:/CK-ModSDK/Temp/GeneratedCode/CK-QOL//NoEquipmentDurabilityLossSystem__System_18387612860.g.cs"
         readonly struct IFE_1312021069_2
         {
             public struct ResolvedChunk
