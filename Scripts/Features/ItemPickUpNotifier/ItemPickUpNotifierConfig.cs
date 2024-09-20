@@ -13,11 +13,11 @@ namespace CK_QOL.Features.ItemPickUpNotifier
 			var acceptableValues = new AcceptableValueList<bool>(true, false);
 			var description = new ConfigDescription($"Enable the '{feature.DisplayName}' ({feature.FeatureType}) feature? {feature.Description}", acceptableValues);
 			var definition = new ConfigDefinition(feature.Name, nameof(feature.IsEnabled));
-			var entry = Config.Bind(definition, false, description);
+			var entry = Config.Bind(definition, true, description);
 
 			return entry.Value;
 		}
-		
+
 		internal static float ApplyAggregateDelay(ItemPickUpNotifier feature)
 		{
 			var acceptableValues = new AcceptableValueRange<float>(1f, 30f);

@@ -9,71 +9,71 @@ namespace CK_QOL.Features.NoEquipmentDurabilityLoss.Systems
     {
         [global::Unity.Entities.DOTSCompilerPatchedMethod("OnUpdate_T0")]
 
-        void __OnUpdate_450AADF4()
-        {
-            #line 46 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-            if (!NoEquipmentDurabilityLoss.Instance.IsEnabled)
-            #line 47 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-            {
-                #line 48 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                return;
-            }
-            #line 51 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+		void __OnUpdate_450AADF4()
+		{
+			#line 53 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			if (!NoEquipmentDurabilityLoss.Instance.IsEnabled)
+			#line 54 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			{
+				#line 55 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+				return;
+			}
+			#line 58 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
 
-            foreach (var (allTrigger, entity) in IFE_1312021062_0.Query(__query_1312021062_0, __TypeHandle.__IFE_1312021062_0_TypeHandle, ref this.CheckedStateRef))
-            #line 52 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-            {
-                #line 53 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                allTrigger.ValueRW.damage = 0;
-                #line 54 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                allTrigger.ValueRW.percentage = 0f;
-                #line 55 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			foreach (var (allTrigger, entity) in IFE_1312021069_0.Query(__query_1312021069_0, __TypeHandle.__IFE_1312021069_0_TypeHandle, ref this.CheckedStateRef))
+			#line 59 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			{
+				#line 60 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+				allTrigger.ValueRW.damage = 0;
+				#line 61 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+				allTrigger.ValueRW.percentage = 0f;
+				#line 62 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
 global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAfterCompletingDependency<global::PlayerEquipment.ReduceDurabilityOfAllEquipmentTriggerCD>(ref __TypeHandle.__PlayerEquipment_ReduceDurabilityOfAllEquipmentTriggerCD_RW_ComponentLookup, ref this.CheckedStateRef, entity, false);
-            }
-            #line 58 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			}
+			#line 65 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
 
-            foreach (var (equippedTrigger, entity) in IFE_1312021062_1.Query(__query_1312021062_1, __TypeHandle.__IFE_1312021062_1_TypeHandle, ref this.CheckedStateRef))
-            #line 59 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-            {
-                #line 60 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                equippedTrigger.ValueRW.triggerCounter = 0;
-                #line 61 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			foreach (var (equippedTrigger, entity) in IFE_1312021069_1.Query(__query_1312021069_1, __TypeHandle.__IFE_1312021069_1_TypeHandle, ref this.CheckedStateRef))
+			#line 66 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			{
+				#line 67 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+				equippedTrigger.ValueRW.triggerCounter = 0;
+				#line 68 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
 global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAfterCompletingDependency<global::PlayerEquipment.ReduceDurabilityOfEquippedTriggerCD>(ref __TypeHandle.__PlayerEquipment_ReduceDurabilityOfEquippedTriggerCD_RW_ComponentLookup, ref this.CheckedStateRef, entity, false);
-            }
-            #line 64 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			}
+			#line 71 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
 
-            foreach (var equippedObject in IFE_1312021062_2.Query(__query_1312021062_2, __TypeHandle.__IFE_1312021062_2_TypeHandle, ref this.CheckedStateRef))
-            #line 65 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-            {
-                #line 66 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                if (equippedObject.ValueRO.containedObject.objectID is ObjectID.None or ObjectID.CattleCage)
-                #line 67 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                {
-                    #line 68 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                    continue;
-                }
-                #line 71 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			foreach (var equippedObject in IFE_1312021069_2.Query(__query_1312021069_2, __TypeHandle.__IFE_1312021069_2_TypeHandle, ref this.CheckedStateRef))
+			#line 72 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+			{
+				#line 73 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+				if (equippedObject.ValueRO.containedObject.objectID is ObjectID.None or ObjectID.CattleCage)
+				#line 74 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+				{
+					#line 75 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+					continue;
+				}
+				#line 78 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
 
-                if (!global::Unity.Entities.Internal.InternalCompilerInterface.HasComponentAfterCompletingDependency<global::DurabilityCD>(ref __TypeHandle.__DurabilityCD_RO_ComponentLookup, ref this.CheckedStateRef, equippedObject.ValueRO.equipmentPrefab))
-                #line 72 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                {
-                    #line 73 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                    continue;
-                }
-                                    #line 76 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                    
-                var durabilityComponent = global::Unity.Entities.Internal.InternalCompilerInterface.GetComponentAfterCompletingDependency<global::DurabilityCD>(ref __TypeHandle.__DurabilityCD_RO_ComponentLookup, ref this.CheckedStateRef, equippedObject.ValueRO.equipmentPrefab);
-                #line 77 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
-                equippedObject.ValueRW.containedObject.objectData.amount = durabilityComponent.maxDurability;
-            }
-            #line 80 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+				if (!global::Unity.Entities.Internal.InternalCompilerInterface.HasComponentAfterCompletingDependency<global::DurabilityCD>(ref __TypeHandle.__DurabilityCD_RO_ComponentLookup, ref this.CheckedStateRef, equippedObject.ValueRO.equipmentPrefab))
+				#line 79 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+				{
+					#line 80 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+					continue;
+				}
+				#line 83 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
 
-            base.OnUpdate();
+				var durabilityComponent = global::Unity.Entities.Internal.InternalCompilerInterface.GetComponentAfterCompletingDependency<global::DurabilityCD>(ref __TypeHandle.__DurabilityCD_RO_ComponentLookup, ref this.CheckedStateRef, equippedObject.ValueRO.equipmentPrefab);
+				#line 84 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+				equippedObject.ValueRW.containedObject.objectData.amount = durabilityComponent.maxDurability;
+			}
+			#line 87 "D:/CK-ModSDK/Assets/CK-QOL/Features/NoEquipmentDurabilityLoss/Systems/NoEquipmentDurabilityLossSystem.cs"
+
+			base.OnUpdate();
 #line hidden
-        }
+		}
 
         #line 76 "D:/CK-ModSDK/Temp/GeneratedCode/CK-QOL//NoEquipmentDurabilityLossSystem__System_18387612860.g.cs"
-        readonly struct IFE_1312021062_0
+        readonly struct IFE_1312021069_0
         {
             public struct ResolvedChunk
             {
@@ -120,7 +120,7 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
                 {
                     if (!entityQuery.IsEmptyIgnoreFilter)
                     {
-                        IFE_1312021062_0.CompleteDependencies(ref state);
+                        IFE_1312021069_0.CompleteDependencies(ref state);
                         typeHandle.Update(ref state);
                         
                     }
@@ -171,7 +171,7 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
             }
         }
         #line 174 "D:/CK-ModSDK/Temp/GeneratedCode/CK-QOL//NoEquipmentDurabilityLossSystem__System_18387612860.g.cs"
-        readonly struct IFE_1312021062_1
+        readonly struct IFE_1312021069_1
         {
             public struct ResolvedChunk
             {
@@ -218,7 +218,7 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
                 {
                     if (!entityQuery.IsEmptyIgnoreFilter)
                     {
-                        IFE_1312021062_1.CompleteDependencies(ref state);
+                        IFE_1312021069_1.CompleteDependencies(ref state);
                         typeHandle.Update(ref state);
                         
                     }
@@ -269,7 +269,7 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
             }
         }
         #line 272 "D:/CK-ModSDK/Temp/GeneratedCode/CK-QOL//NoEquipmentDurabilityLossSystem__System_18387612860.g.cs"
-        readonly struct IFE_1312021062_2
+        readonly struct IFE_1312021069_2
         {
             public struct ResolvedChunk
             {
@@ -311,7 +311,7 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
                 {
                     if (!entityQuery.IsEmptyIgnoreFilter)
                     {
-                        IFE_1312021062_2.CompleteDependencies(ref state);
+                        IFE_1312021069_2.CompleteDependencies(ref state);
                         typeHandle.Update(ref state);
                         
                     }
@@ -363,23 +363,23 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
         }
         
         TypeHandle __TypeHandle;
-        global::Unity.Entities.EntityQuery __query_1312021062_0;
-        global::Unity.Entities.EntityQuery __query_1312021062_1;
-        global::Unity.Entities.EntityQuery __query_1312021062_2;
+        global::Unity.Entities.EntityQuery __query_1312021069_0;
+        global::Unity.Entities.EntityQuery __query_1312021069_1;
+        global::Unity.Entities.EntityQuery __query_1312021069_2;
         struct TypeHandle
         {
-            public IFE_1312021062_0.TypeHandle __IFE_1312021062_0_TypeHandle;
-            public IFE_1312021062_1.TypeHandle __IFE_1312021062_1_TypeHandle;
-            public IFE_1312021062_2.TypeHandle __IFE_1312021062_2_TypeHandle;
+            public IFE_1312021069_0.TypeHandle __IFE_1312021069_0_TypeHandle;
+            public IFE_1312021069_1.TypeHandle __IFE_1312021069_1_TypeHandle;
+            public IFE_1312021069_2.TypeHandle __IFE_1312021069_2_TypeHandle;
             public global::Unity.Entities.ComponentLookup<global::PlayerEquipment.ReduceDurabilityOfAllEquipmentTriggerCD> __PlayerEquipment_ReduceDurabilityOfAllEquipmentTriggerCD_RW_ComponentLookup;
             public global::Unity.Entities.ComponentLookup<global::PlayerEquipment.ReduceDurabilityOfEquippedTriggerCD> __PlayerEquipment_ReduceDurabilityOfEquippedTriggerCD_RW_ComponentLookup;
             [global::Unity.Collections.ReadOnly] public global::Unity.Entities.ComponentLookup<global::DurabilityCD> __DurabilityCD_RO_ComponentLookup;
             [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
             public void __AssignHandles(ref global::Unity.Entities.SystemState state)
             {
-                __IFE_1312021062_0_TypeHandle = new IFE_1312021062_0.TypeHandle(ref state);
-                __IFE_1312021062_1_TypeHandle = new IFE_1312021062_1.TypeHandle(ref state);
-                __IFE_1312021062_2_TypeHandle = new IFE_1312021062_2.TypeHandle(ref state);
+                __IFE_1312021069_0_TypeHandle = new IFE_1312021069_0.TypeHandle(ref state);
+                __IFE_1312021069_1_TypeHandle = new IFE_1312021069_1.TypeHandle(ref state);
+                __IFE_1312021069_2_TypeHandle = new IFE_1312021069_2.TypeHandle(ref state);
                 __PlayerEquipment_ReduceDurabilityOfAllEquipmentTriggerCD_RW_ComponentLookup = state.GetComponentLookup<global::PlayerEquipment.ReduceDurabilityOfAllEquipmentTriggerCD>(false);
                 __PlayerEquipment_ReduceDurabilityOfEquippedTriggerCD_RW_ComponentLookup = state.GetComponentLookup<global::PlayerEquipment.ReduceDurabilityOfEquippedTriggerCD>(false);
                 __DurabilityCD_RO_ComponentLookup = state.GetComponentLookup<global::DurabilityCD>(true);
@@ -390,17 +390,17 @@ global::Unity.Entities.Internal.InternalCompilerInterface.SetComponentEnabledAft
         void __AssignQueries(ref global::Unity.Entities.SystemState state)
         {
             var entityQueryBuilder = new global::Unity.Entities.EntityQueryBuilder(global::Unity.Collections.Allocator.Temp);
-            __query_1312021062_0 = 
+            __query_1312021069_0 = 
                 entityQueryBuilder
                     .WithAllRW<global::PlayerEquipment.ReduceDurabilityOfAllEquipmentTriggerCD>()
                     .Build(ref state);
             entityQueryBuilder.Reset();
-            __query_1312021062_1 = 
+            __query_1312021069_1 = 
                 entityQueryBuilder
                     .WithAllRW<global::PlayerEquipment.ReduceDurabilityOfEquippedTriggerCD>()
                     .Build(ref state);
             entityQueryBuilder.Reset();
-            __query_1312021062_2 = 
+            __query_1312021069_2 = 
                 entityQueryBuilder
                     .WithAllRW<global::EquippedObjectCD>()
                     .Build(ref state);
